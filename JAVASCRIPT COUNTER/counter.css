@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.counterBx{
+    background: lightgray;
+    width: 500px;
+    height: 200px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.counterBx h1{
+    font-size: 5rem;
+    color: #000;
+}
+.counterBx p{
+    font-size: 1rem;
+    color: #000;
+}
+.controlWrapper{
+    margin-top: 10px;
+}
+
+#incrementBtn, #decrementBtn{
+    width: 45px;
+    height: 40px;
+    font-size: 2rem;
+    background: white;
+    color: #000;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+}
+#incrementBtn:hover, #decrementBtn:hover {
+    background: lightyellow;
+}
+/* .negative{
+    color: red;
+    animation: pulse 500ms ease-in-out;
+}
+.positive {
+    color: green;
+    animation: pulse 500ms ease-in-out;
+} */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="counter.css">
+    <title>Counter</title>
+<body>
+    <div class="counterBx">
+        <h1 id="counter">0</h1>
+        <p id="price"></p>
+        <div class="controlWrapper">
+
+            <button id ="decrementBtn">-</button>
+            <button id ="incrementBtn">+</button>
+            
+        </div>
+    </div>
+
+
+    <script>
+        let addBtn = document.getElementById("incrementBtn");
+        let subtractBtn = document.getElementById("decrementBtn");
+        let counter = document.getElementById("counter");
+        let price = document.getElementById("price");
+        let count = 0;
+        let priceTag = 1500;
+       
+
+        subtractBtn.addEventListener('click', ()=>{
+            count--;
+            counter.innerHTML=count;
+            let totalPrice = count * priceTag;
+            price.innerHTML=totalPrice;
+            counterStyle();
+        });
+
+        addBtn.addEventListener('click', ()=>{
+            count++;
+            counter.innerHTML= count;
+            let totalPrice = count * priceTag;
+            price.innerHTML=totalPrice;
+            counterStyle();
+        });
+        
+        function counterStyle(){
+            if(count < 0){
+                // counter.classList.add("negative");
+                counter.style.color = "red";
+            }
+            else if (count > 0 && count <=10 ){
+                counter.style.color="blue";
+            }
+            else if (count > 0){
+                // counter.classList.add("positive");
+                counter.style.color="green";
+            }
+            else{
+                counter.style.color="#000";
+                ;
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
